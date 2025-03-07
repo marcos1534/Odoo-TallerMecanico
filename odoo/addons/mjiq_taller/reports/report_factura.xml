@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="mjiq_taller_report_factura"
+            model="mjiq_taller.factura"
+            string="Informe de Factura"
+            name="mjiq_taller.report_factura_view"
+            file="mjiq_taller.report_factura_view"
+            report_type="qweb-pdf"
+        />
+
+        <template id="mjiq_taller.report_factura_view">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <main>
+
+                        <hr style="border-top: 3px solid #2C3E50; margin-bottom: 20px;"/>
+
+                        <!-- Encabezado con imagen -->
+                        <div class="text-left" style="margin-bottom: 20px;">
+                            <t t-if="company_logo">
+                                <img t-att-src="'data:image/png;base64,%s' % company_logo" style="max-height: 80px;"/>
+                            </t>
+                        </div>
+
+                        <div class="text-center">
+                            <h2 style="color: #2C3E50;">Factura: <t t-esc="doc.name"/></h2>
+                        </div>
+
+                        <!-- Datos de la factura -->
+                        <div style="border-bottom: 2px solid #2C3E50; padding-bottom: 10px; margin-bottom: 15px;">
+                            <p><strong>Cliente:</strong> <t t-esc="doc.cliente_id.name"/></p>
+                            <p><strong>Fecha de emisión:</strong> <t t-esc="doc.fecha_emision"/></p>
+                            <p><strong>Estado:</strong>
+                                <t t-if="doc.estado == '0'">Borrador</t>
+                                <t t-if="doc.estado == '1'">Confirmada</t>
+                                <t t-if="doc.estado == '2'">Pagada</t>
+                                <t t-if="doc.estado == '3'">Cancelada</t>
+                            </p>
+                        </div>
+
+                        <!-- Subinforme: Servicios -->
+                        <t t-if="doc.cita_id">
+                            <div>
+                                <h3 style="background: #2C3E50; color: white; padding: 5px;">Detalles del Servicio</h3>
+                                <p><strong>Servicio(s):</strong> <t t-esc="doc.cita_id.servicio"/></p>
+                            </div>
+                        </t>
+
+                        <!-- Subinforme: Proveedores -->
+                        <t t-if="doc.proveedor_ids">
+                            <div>
+                                <h3 style="background: #2C3E50; color: white; padding: 5px;">Proveedores Asociados</h3>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="background-color: #2C3E50; color: white;">
+                                            <th style="padding: 5px; border: 1px solid #ddd;">Nombre</th>
+                                            <th style="padding: 5px; border: 1px solid #ddd;">Teléfono</th>
+                                            <th style="padding: 5px; border: 1px solid #ddd;">Dirección</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.proveedor_ids" t-as="proveedor">
+                                            <tr>
+                                                <td style="padding: 5px; border: 1px solid #ddd;"><t t-esc="proveedor.name"/></td>
+                                                <td style="padding: 5px; border: 1px solid #ddd;"><t t-esc="proveedor.telefono"/></td>
+                                                <td style="padding: 5px; border: 1px solid #ddd;"><t t-esc="proveedor.direccion"/></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </t>
+
+                        <!-- Subinforme: Repuestos Utilizados -->
+                        <t t-if="doc.repuestos_ids">
+                            <div>
+                                <h3 style="background: #2C3E50; color: white; padding: 5px;">Repuestos Utilizados</h3>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="background-color: #2C3E50; color: white;">
+                                            <th style="padding: 5px; border: 1px solid #ddd;">Repuesto</th>
+                                            <th style="padding: 5px; border: 1px solid #ddd;">Precio</th>
+                                            <th style="padding: 5px; border: 1px solid #ddd;">Imagen</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.repuestos_ids" t-as="repuesto">
+                                            <tr>
+                                                <td style="padding: 5px; border: 1px solid #ddd;"><t t-esc="repuesto.name"/></td>
+                                                <td style="padding: 5px; border: 1px solid #ddd;"><t t-esc="repuesto.precio"/> <t t-esc="doc.currency_id.symbol"/></td>
+                                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">
+                                                    <t t-if="repuesto.imagen_repuesto">
+                                                        <img t-att-src="repuesto.get_imagen_base64()" style="max-width: 80px; display: block; margin: auto;"/>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </t>
+                        
+                        <!-- Llamada a la plantilla personalizada para las notas -->
+                        <t t-call="mjiq_taller.custom_invoice_section"/>
+
+                        <!-- Total a pagar -->
+                        <div style="margin-top: 20px; text-align: right;">
+                            <h3><strong>Total:</strong> <t t-esc="doc.total"/> <t t-esc="doc.currency_id.symbol"/></h3>
+                        </div>
+
+                        <!-- Pie de página -->
+                        <div class="text-center" style="margin-top: 30px; font-size: 12px; color: gray;">
+                            <p>Gracias por confiar en nuestro taller mecánico.</p>
+                            <p>Para cualquier consulta, contáctenos al <strong>+34 123 456 789</strong></p>
+                        </div>
+
+                    </main>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

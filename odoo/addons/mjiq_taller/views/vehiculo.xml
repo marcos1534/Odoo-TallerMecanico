@@ -1,0 +1,153 @@
+<odoo>
+  <data>
+    <record id="mjiq_taller.vehiculo_tree" model="ir.ui.view">
+      <field name="name">mjiq_taller.vehiculo.tree</field>
+      <field name="model">mjiq_taller.vehiculo</field>
+      <field name="arch" type="xml">
+        <tree string="Vehículo">
+          <field name="foto_vehiculo" widget="image" options="{'width': 50, 'height': 50}"/>
+          <field name="name"/>
+          <field name="matricula"/>
+          <field name="marca"/>
+          <field name="modelo"/>
+          <field name="anio"/>
+          <field name="estado"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="mjiq_taller.vehiculo_form" model="ir.ui.view">
+      <field name="name">mjiq_taller.vehiculo.form</field>
+      <field name="model">mjiq_taller.vehiculo</field>
+      <field name="arch" type="xml">
+        <form string="Vehículo">
+          <sheet>
+            <group>
+              <group>
+                <field name="foto_vehiculo" widget="image" class="oe_avatar"/>
+              </group>
+              <group>
+                <field name="name"/>
+                <field name="matricula"/>
+                <field name="marca"/>
+                <field name="modelo"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Detalles">
+                <group>
+                  <field name="anio"/>
+                  <field name="color"/>
+                  <field name="kilometraje"/>
+                  <field name="cilindrada"/>
+                </group>
+              </page>
+              <page string="Especificaciones">
+                <group>
+                  <field name="numeroPuertas"/>
+                  <field name="capacidad_pasajeros"/>
+                  <field name="estado"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="mjiq_taller.vehiculo_kanban" model="ir.ui.view">
+      <field name="name">mjiq_taller.vehiculo.kanban</field>
+      <field name="model">mjiq_taller.vehiculo</field>
+      <field name="arch" type="xml">
+        <kanban class="o_kanban_view" default_group_by="tipo_vehiculo">
+          <field name="foto_vehiculo"/>
+          <field name="name"/>
+          <field name="marca"/>
+          <field name="modelo"/>
+          <field name="matricula"/>
+          <field name="anio_formateado"/> <!-- Usar el campo computado -->
+          <field name="estado"/>
+          <field name="tipo_vehiculo"/>
+          <field name="test_vista_kanban_imagen" widget="image"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_card shadow-lg p-2 rounded"
+                  style="border: 1px solid #ddd; border-radius: 10px; padding: 10px; background-color: #f9f9f9;">
+                <div class="d-flex align-items-center">
+                  <!-- Imagen del vehículo -->
+                  <div style="width: 80px; height: 80px; overflow: hidden; border-radius: 10px; margin-right: 10px;">
+                    <img t-att-src="'/web/image?model=mjiq_taller.vehiculo&amp;id=' + record.id.raw_value + '&amp;field=test_vista_kanban_imagen'"
+                      style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px; padding: 5px; background: #fff;"/>
+                  </div>
+                  <!-- Detalles del vehículo -->
+                  <div style="flex: 1;">
+                    <strong class="d-block" style="font-size: 14px; color: #333;">
+                      <t t-esc="record.name.raw_value or 'Sin nombre'"/>
+                    </strong>
+                    <div style="font-size: 12px; color: #555; margin-top: 5px;">
+                      <span><t t-esc="record.marca.raw_value or ''"/> - <t t-esc="record.modelo.raw_value or ''"/></span>
+                    </div>
+                    <div style="font-size: 12px; color: #777; margin-top: 5px;">
+                      <span><t t-esc="record.matricula.raw_value or ''"/></span>
+                      <span t-if="record.anio_formateado.raw_value">
+                        - <t t-esc="record.anio_formateado.raw_value"/>
+                      </span>
+                    </div>
+                    <!-- Estado del vehículo -->
+                    <div style="margin-top: 5px;">
+                      <t t-if="record.estado.raw_value == 'Nuevo'">
+                        <div class="badge mt-1" style="background-color: #28a745; color: white;">
+                          <t t-esc="record.estado.raw_value"/>
+                        </div>
+                      </t>
+                      <t t-if="record.estado.raw_value == 'Usado'">
+                        <div class="badge mt-1" style="background-color: #ffc107; color: black;">
+                          <t t-esc="record.estado.raw_value"/>
+                        </div>
+                      </t>
+                      <t t-if="record.estado.raw_value == 'En Reparación'">
+                        <div class="badge mt-1" style="background-color: #dc3545; color: white;">
+                          <t t-esc="record.estado.raw_value"/>
+                        </div>
+                      </t>
+                    </div>
+                    <!-- Tipo de vehículo (mejora adicional) -->
+                    <div style="margin-top: 5px;">
+                      <span class="fa fa-car" style="color: #666; margin-right: 5px;"></span>
+                      <span style="font-size: 12px; color: #666;">
+                        <t t-esc="record.tipo_vehiculo.raw_value or ''"/>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <record id="mjiq_taller.vehiculo_search" model="ir.ui.view">
+      <field name="name">mjiq_taller.vehiculo.search</field>
+      <field name="model">mjiq_taller.vehiculo</field>
+      <field name="arch" type="xml">
+        <search string="Vehículos">
+          <field name="name"/>
+          <field name="matricula"/>
+          <field name="marca"/>
+          <field name="modelo"/>
+          <field name="anio"/>
+          <field name="estado"/>
+          <group expand="0" string="Filtrar por">
+            <filter name="estado_nuevo" string="Nuevo" domain="[('estado','=','Nuevo')]"/>
+            <filter name="estado_usado" string="Usado" domain="[('estado','=','Usado')]"/>
+            <filter name="estado_reparacion" string="En Reparación" domain="[('estado','=','En Reparación')]"/>
+            
+            <!-- Filtro complejo con contexto -->
+            <filter name="test_vista_search_compleja" string="Filtrar por Marca" domain="[('estado','=','Nuevo')]" context="{'group_by': 'marca'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+  </data>
+</odoo>

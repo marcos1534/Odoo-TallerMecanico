@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cliente_1" model="mjiq_taller.cliente">
+            <field name="name">Juan Pérez</field>
+            <field name="dni">12345678A</field>
+            <field name="telefono">+34 612345678</field>
+            <field name="correo">juan.perez@example.com</field>
+            <field name="direccion">Calle Mayor 12, Madrid, España</field>
+        </record>
+
+        <record id="cliente_2" model="mjiq_taller.cliente">
+            <field name="name">María González</field>
+            <field name="dni">87654321B</field>
+            <field name="telefono">+34 623456789</field>
+            <field name="correo">maria.gonzalez@example.com</field>
+            <field name="direccion">Avenida del Sol 45, Barcelona, España</field>
+        </record>
+
+        <record id="cliente_3" model="mjiq_taller.cliente">
+            <field name="name">Carlos Fernández</field>
+            <field name="dni">45612378C</field>
+            <field name="telefono">+34 634567890</field>
+            <field name="correo">carlos.fernandez@example.com</field>
+            <field name="direccion">Paseo de la Castellana 88, Madrid, España</field>
+        </record>
+
+        <record id="cliente_4" model="mjiq_taller.cliente">
+            <field name="name">Ana Martínez</field>
+            <field name="dni">78965412D</field>
+            <field name="telefono">+34 645678901</field>
+            <field name="correo">ana.martinez@example.com</field>
+            <field name="direccion">Gran Vía 22, Valencia, España</field>
+        </record>
+
+        <record id="cliente_5" model="mjiq_taller.cliente">
+            <field name="name">Luis Ramírez</field>
+            <field name="dni">32198765E</field>
+            <field name="telefono">+34 656789012</field>
+            <field name="correo">luis.ramirez@example.com</field>
+            <field name="direccion">Calle Serrano 5, Sevilla, España</field>
+        </record>
+
+        <record id="cliente_6" model="mjiq_taller.cliente">
+            <field name="name">Beatriz López</field>
+            <field name="dni">65432198F</field>
+            <field name="telefono">+34 667890123</field>
+            <field name="correo">beatriz.lopez@example.com</field>
+            <field name="direccion">Plaza Mayor 30, Bilbao, España</field>
+        </record>
+
+        <record id="cliente_7" model="mjiq_taller.cliente">
+            <field name="name">Diego Torres</field>
+            <field name="dni">98765432G</field>
+            <field name="telefono">+34 678901234</field>
+            <field name="correo">diego.torres@example.com</field>
+            <field name="direccion">Calle Luna 14, Zaragoza, España</field>
+        </record>
+
+        <record id="cliente_8" model="mjiq_taller.cliente">
+            <field name="name">Laura Sánchez</field>
+            <field name="dni">74185296H</field>
+            <field name="telefono">+34 689012345</field>
+            <field name="correo">laura.sanchez@example.com</field>
+            <field name="direccion">Paseo Marítimo 8, Málaga, España</field>
+        </record>
+
+        <record id="cliente_9" model="mjiq_taller.cliente">
+            <field name="name">Pedro Gutiérrez</field>
+            <field name="dni">36925814I</field>
+            <field name="telefono">+34 690123456</field>
+            <field name="correo">pedro.gutierrez@example.com</field>
+            <field name="direccion">Avenida Andalucía 50, Granada, España</field>
+        </record>
+
+        <record id="cliente_10" model="mjiq_taller.cliente">
+            <field name="name">Elena Navarro</field>
+            <field name="dni">25814793J</field>
+            <field name="telefono">+34 691234567</field>
+            <field name="correo">elena.navarro@example.com</field>
+            <field name="direccion">Calle del Carmen 77, Alicante, España</field>
+        </record>
+
+        <record id="demo_activity_1" model="mail.activity">
+            <field name="res_model_id" ref="model_mjiq_taller_cliente"/>
+            <field name="res_id" ref="mjiq_taller.cliente_1"/>
+            <field name="summary">Confirmar cita con el cliente</field>
+            <field name="activity_type_id" ref="mail.mail_activity_data_call"/>
+            <field name="date_deadline">2025-03-01</field>
+            <field name="state">planned</field>
+        </record>
+
+        <record id="demo_activity_2" model="mail.activity">
+            <field name="res_model_id" ref="model_mjiq_taller_cliente"/>
+            <field name="res_id" ref="mjiq_taller.cliente_2"/>
+            <field name="summary">Revisión del estado del vehículo</field>
+            <field name="activity_type_id" ref="mail.mail_activity_data_todo"/>
+            <field name="date_deadline">2025-02-28</field>
+            <field name="state">today</field>
+        </record>
+
+        <record id="vehiculo_1" model="mjiq_taller.vehiculo">
+            <field name="name">BMW M3 2022</field>
+            <field name="matricula">9123DEF</field>
+            <field name="marca">BMW</field>
+            <field name="modelo">M3</field>
+            <field name="descripcion">Deportivo de lujo con tracción total y potencia adicional.</field>
+            <field name="anio">2022-07-10</field>
+            <field name="color">Azul</field>
+            <field name="kilometraje">30000</field>
+            <field name="cilindrada">8000</field>
+            <field name="propietario_id" ref="cliente_1"/>
+            <field name="fecha_registro">2023-03-05 09:15:00</field>
+            <field name="numeroPuertas">5</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">0</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo1.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo1.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_2" model="mjiq_taller.vehiculo">
+            <field name="name">Audi R8 2021</field>
+            <field name="matricula">3456GHI</field>
+            <field name="marca">Audi</field>
+            <field name="modelo">R8</field>
+            <field name="descripcion">Cupé deportivo con motor turbo y tecnología avanzada.</field>
+            <field name="anio">2021-04-05</field>
+            <field name="color">Rojo</field>
+            <field name="kilometraje">60000</field>
+            <field name="cilindrada">7500</field>
+            <field name="propietario_id" ref="cliente_2"/>
+            <field name="fecha_registro">2022-11-20 11:00:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo2.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo2.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_3" model="mjiq_taller.vehiculo">
+            <field name="name">Ford Focus 2020</field>
+            <field name="matricula">1234ABC</field>
+            <field name="marca">Ford</field>
+            <field name="modelo">Focus</field>
+            <field name="descripcion">Sedán compacto con tecnología avanzada y gran eficiencia de combustible.</field>
+            <field name="anio">2020-01-15</field>
+            <field name="color">Azul</field>
+            <field name="kilometraje">45000</field>
+            <field name="cilindrada">2000</field>
+            <field name="propietario_id" ref="cliente_3"/>
+            <field name="fecha_registro">2023-06-10 10:30:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo3.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo3.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_4" model="mjiq_taller.vehiculo">
+            <field name="name">Toyota Prius 2018</field>
+            <field name="matricula">5678XYZ</field>
+            <field name="marca">Toyota</field>
+            <field name="modelo">Prius</field>
+            <field name="descripcion">Vehículo híbrido con gran autonomía y bajo consumo de combustible.</field>
+            <field name="anio">2018-05-20</field>
+            <field name="color">Blanco</field>
+            <field name="kilometraje">80000</field>
+            <field name="cilindrada">1800</field>
+            <field name="propietario_id" ref="cliente_4"/>
+            <field name="fecha_registro">2022-09-15 12:45:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">3</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo4.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo4.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_5" model="mjiq_taller.vehiculo">
+            <field name="name">Tesla Model 3</field>
+            <field name="matricula">7890JKL</field>
+            <field name="marca">Tesla</field>
+            <field name="modelo">Model 3</field>
+            <field name="descripcion">Coche eléctrico con autonomía superior a 500 km por carga.</field>
+            <field name="anio">2022-02-01</field>
+            <field name="color">Rojo</field>
+            <field name="kilometraje">15000</field>
+            <field name="cilindrada">0</field>
+            <field name="propietario_id" ref="cliente_5"/>
+            <field name="fecha_registro">2023-07-22 15:30:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">2</field>
+            <field name="transmision">1</field>
+            <field name="estado">0</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo5.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo5.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_6" model="mjiq_taller.vehiculo">
+            <field name="name">Chevrolet Silverado</field>
+            <field name="matricula">4567MNO</field>
+            <field name="marca">Chevrolet</field>
+            <field name="modelo">Silverado</field>
+            <field name="descripcion">Pickup con gran capacidad de carga y motor potente.</field>
+            <field name="anio">2017-06-10</field>
+            <field name="color">Blanco</field>
+            <field name="kilometraje">120000</field>
+            <field name="cilindrada">5000</field>
+            <field name="propietario_id" ref="cliente_6"/>
+            <field name="fecha_registro">2021-09-30 08:00:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">0</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo6.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo6.jpg" type="base64"></field>
+        </record>
+        <record id="vehiculo_7" model="mjiq_taller.vehiculo">
+            <field name="name">Honda Civic 2020</field>
+            <field name="matricula">1597PQR</field>
+            <field name="marca">Honda</field>
+            <field name="modelo">Civic</field>
+            <field name="descripcion">Sedán compacto con excelente rendimiento y tecnología avanzada.</field>
+            <field name="anio">2020-03-10</field>
+            <field name="color">Plata</field>
+            <field name="kilometraje">35000</field>
+            <field name="cilindrada">2000</field>
+            <field name="propietario_id" ref="cliente_7"/>
+            <field name="fecha_registro">2023-08-12 14:00:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo7.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo7.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_8" model="mjiq_taller.vehiculo">
+            <field name="name">Mercedes-Benz GLC 2019</field>
+            <field name="matricula">7532STU</field>
+            <field name="marca">Mercedes-Benz</field>
+            <field name="modelo">GLC</field>
+            <field name="descripcion">SUV premium con diseño elegante y tracción total.</field>
+            <field name="anio">2019-08-15</field>
+            <field name="color">Negro</field>
+            <field name="kilometraje">55000</field>
+            <field name="cilindrada">2200</field>
+            <field name="propietario_id" ref="cliente_8"/>
+            <field name="fecha_registro">2022-12-05 09:45:00</field>
+            <field name="numeroPuertas">5</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo8.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo8.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_9" model="mjiq_taller.vehiculo">
+            <field name="name">Mazda CX-5 2021</field>
+            <field name="matricula">4682VWX</field>
+            <field name="marca">Mazda</field>
+            <field name="modelo">CX-5</field>
+            <field name="descripcion">SUV con excelente manejo y diseño atractivo.</field>
+            <field name="anio">2021-11-20</field>
+            <field name="color">Rojo</field>
+            <field name="kilometraje">25000</field>
+            <field name="cilindrada">2500</field>
+            <field name="propietario_id" ref="cliente_9"/>
+            <field name="fecha_registro">2023-04-18 13:15:00</field>
+            <field name="numeroPuertas">5</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">0</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo9.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo9.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_10" model="mjiq_taller.vehiculo">
+            <field name="name">Volkswagen Golf 2018</field>
+            <field name="matricula">2849YZA</field>
+            <field name="marca">Volkswagen</field>
+            <field name="modelo">Golf</field>
+            <field name="descripcion">Hatchback confiable y eficiente con gran rendimiento.</field>
+            <field name="anio">2018-09-25</field>
+            <field name="color">Rojo</field>
+            <field name="kilometraje">70000</field>
+            <field name="cilindrada">1600</field>
+            <field name="propietario_id" ref="cliente_10"/>
+            <field name="fecha_registro">2022-07-30 10:00:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">5</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">0</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo10.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Coche</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo10.jpg" type="base64"></field>
+        </record>
+        
+        <record id="vehiculo_11" model="mjiq_taller.vehiculo">
+            <field name="name">Yamaha YZF-R1 2021</field>
+            <field name="matricula">3043MRT</field>
+            <field name="marca">Yamaha</field>
+            <field name="modelo">YZF-R1</field>
+            <field name="descripcion">Motocicleta deportiva de alta gama con motor de 1000cc.</field>
+            <field name="anio">2021-05-15</field>
+            <field name="color">Azul</field>
+            <field name="kilometraje">12000</field>
+            <field name="cilindrada">1000</field>
+            <field name="propietario_id" ref="cliente_1"/>
+            <field name="fecha_registro">2023-01-10 10:00:00</field>
+            <field name="numeroPuertas">0</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo11.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Motocicleta</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo11.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_12" model="mjiq_taller.vehiculo">
+            <field name="name">Harley-Davidson Sportster 2020</field>
+            <field name="matricula">8945JPS</field>
+            <field name="marca">Harley-Davidson</field>
+            <field name="modelo">Sportster</field>
+            <field name="descripcion">Motocicleta clásica con estilo cruiser y motor V-Twin.</field>
+            <field name="anio">2020-08-20</field>
+            <field name="color">Marrón</field>
+            <field name="kilometraje">8000</field>
+            <field name="cilindrada">1200</field>
+            <field name="propietario_id" ref="cliente_2"/>
+            <field name="fecha_registro">2022-12-15 11:30:00</field>
+            <field name="numeroPuertas">0</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo12.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Motocicleta</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo12.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_13" model="mjiq_taller.vehiculo">
+            <field name="name">Kawasaki Ninja 650 2022</field>
+            <field name="matricula">4376KNF</field>
+            <field name="marca">Kawasaki</field>
+            <field name="modelo">Ninja 650</field>
+            <field name="descripcion">Motocicleta deportiva con un equilibrio perfecto entre potencia y comodidad.</field>
+            <field name="anio">2022-03-10</field>
+            <field name="color">Verde</field>
+            <field name="kilometraje">5000</field>
+            <field name="cilindrada">650</field>
+            <field name="propietario_id" ref="cliente_4"/>
+            <field name="fecha_registro">2023-05-20 09:45:00</field>
+            <field name="numeroPuertas">0</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo13.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Motocicleta</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo13.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_14" model="mjiq_taller.vehiculo">
+            <field name="name">Ducati Panigale V4 2023</field>
+            <field name="matricula">1243MNT</field>
+            <field name="marca">Ducati</field>
+            <field name="modelo">Panigale V4</field>
+            <field name="descripcion">Motocicleta de carreras con motor V4 y tecnología avanzada.</field>
+            <field name="anio">2023-01-05</field>
+            <field name="color">Rojo</field>
+            <field name="kilometraje">3000</field>
+            <field name="cilindrada">1100</field>
+            <field name="propietario_id" ref="cliente_5"/>
+            <field name="fecha_registro">2023-09-01 14:20:00</field>
+            <field name="numeroPuertas">0</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">0</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo14.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Motocicleta</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo14.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_15" model="mjiq_taller.vehiculo">
+            <field name="name">Mercedes Actros</field>
+            <field name="matricula">5678TRK</field>
+            <field name="marca">Mercedes-Benz</field>
+            <field name="modelo">Actros</field>
+            <field name="descripcion">Camión de transporte de larga distancia.</field>
+            <field name="anio">2021-07-15</field>
+            <field name="color">Blanco</field>
+            <field name="kilometraje">120000</field>
+            <field name="cilindrada">12800</field>
+            <field name="propietario_id" ref="cliente_6"/>
+            <field name="fecha_registro">2023-10-01 08:30:00</field>
+            <field name="numeroPuertas">2</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo15.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Camión</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo15.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_16" model="mjiq_taller.vehiculo">
+            <field name="name">Volvo FH16</field>
+            <field name="matricula">4321TRK</field>
+            <field name="marca">Volvo</field>
+            <field name="modelo">FH16</field>
+            <field name="descripcion">Camión de alto rendimiento para cargas pesadas.</field>
+            <field name="anio">2020-05-20</field>
+            <field name="color">Azul</field>
+            <field name="kilometraje">180000</field>
+            <field name="cilindrada">16000</field>
+            <field name="propietario_id" ref="cliente_7"/>
+            <field name="fecha_registro">2023-11-12 10:00:00</field>
+            <field name="numeroPuertas">2</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo16.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Camión</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo16.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_17" model="mjiq_taller.vehiculo">
+            <field name="name">Mercedes-Benz Sprinter</field>
+            <field name="matricula">5678VAN</field>
+            <field name="marca">Mercedes-Benz</field>
+            <field name="modelo">Sprinter</field>
+            <field name="descripcion">Furgoneta versátil y espaciosa para transporte comercial.</field>
+            <field name="anio">2021-07-15</field>
+            <field name="color">Blanco</field>
+            <field name="kilometraje">75000</field>
+            <field name="cilindrada">2200</field>
+            <field name="propietario_id" ref="cliente_8"/>
+            <field name="fecha_registro">2024-02-10 09:30:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">3</field>
+            <field name="tipoCombustible">2</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo17.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Furgoneta</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo17.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_18" model="mjiq_taller.vehiculo">
+            <field name="name">Ford Transit</field>
+            <field name="matricula">9876VAN</field>
+            <field name="marca">Ford</field>
+            <field name="modelo">Transit</field>
+            <field name="descripcion">Furgoneta confiable para reparto urbano.</field>
+            <field name="anio">2019-09-10</field>
+            <field name="color">Gris</field>
+            <field name="kilometraje">120000</field>
+            <field name="cilindrada">2000</field>
+            <field name="propietario_id" ref="cliente_9"/>
+            <field name="fecha_registro">2023-12-05 14:20:00</field>
+            <field name="numeroPuertas">4</field>
+            <field name="capacidad_pasajeros">3</field>
+            <field name="tipoCombustible">2</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo18.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Furgoneta</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo18.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_19" model="mjiq_taller.vehiculo">
+            <field name="name">Volvo 9700</field>
+            <field name="matricula">1234BUS</field>
+            <field name="marca">Volvo</field>
+            <field name="modelo">9700</field>
+            <field name="descripcion">Autobús de larga distancia con gran capacidad.</field>
+            <field name="anio">2018-06-25</field>
+            <field name="color">Rojo</field>
+            <field name="kilometraje">250000</field>
+            <field name="cilindrada">12000</field>
+            <field name="propietario_id" ref="cliente_10"/>
+            <field name="fecha_registro">2023-10-20 08:00:00</field>
+            <field name="numeroPuertas">2</field>
+            <field name="capacidad_pasajeros">50</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo19.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Autobús</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo19.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_20" model="mjiq_taller.vehiculo">
+            <field name="name">Scania Touring</field>
+            <field name="matricula">5678BUS</field>
+            <field name="marca">Scania</field>
+            <field name="modelo">Touring</field>
+            <field name="descripcion">Autobús cómodo y eficiente para viajes turísticos.</field>
+            <field name="anio">2020-03-18</field>
+            <field name="color">Azul</field>
+            <field name="kilometraje">180000</field>
+            <field name="cilindrada">13000</field>
+            <field name="propietario_id" ref="cliente_5"/>
+            <field name="fecha_registro">2024-01-15 12:45:00</field>
+            <field name="numeroPuertas">2</field>
+            <field name="capacidad_pasajeros">55</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo20.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Autobús</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo20.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_21" model="mjiq_taller.vehiculo">
+            <field name="name">MAN TGS Grua</field>
+            <field name="matricula">1122GRU</field>
+            <field name="marca">MAN</field>
+            <field name="modelo">TGS</field>
+            <field name="descripcion">Grúa robusta para trabajos pesados.</field>
+            <field name="anio">2017-05-12</field>
+            <field name="color">Amarillo</field>
+            <field name="kilometraje">300000</field>
+            <field name="cilindrada">10500</field>
+            <field name="propietario_id" ref="cliente_3"/>
+            <field name="fecha_registro">2023-09-10 11:00:00</field>
+            <field name="numeroPuertas">2</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo21.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Grúa</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo21.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_22" model="mjiq_taller.vehiculo">
+            <field name="name">Iveco Eurocargo Grua</field>
+            <field name="matricula">3344GRU</field>
+            <field name="marca">Iveco</field>
+            <field name="modelo">Eurocargo</field>
+            <field name="descripcion">Grúa ligera para asistencia en carretera.</field>
+            <field name="anio">2019-08-21</field>
+            <field name="color">Blanco</field>
+            <field name="kilometraje">220000</field>
+            <field name="cilindrada">6700</field>
+            <field name="propietario_id" ref="cliente_7"/>
+            <field name="fecha_registro">2024-02-05 15:00:00</field>
+            <field name="numeroPuertas">2</field>
+            <field name="capacidad_pasajeros">2</field>
+            <field name="tipoCombustible">1</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo22.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Grúa</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo22.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_23" model="mjiq_taller.vehiculo">
+            <field name="name">John Deere 6195M</field>
+            <field name="matricula">TRC1234</field>
+            <field name="marca">John Deere</field>
+            <field name="modelo">6195M</field>
+            <field name="descripcion">Tractor agrícola de alto rendimiento.</field>
+            <field name="anio">2021-06-15</field>
+            <field name="color">Verde</field>
+            <field name="kilometraje">1500</field>
+            <field name="cilindrada">6800</field>
+            <field name="propietario_id" ref="cliente_4"/>
+            <field name="fecha_registro">2024-02-26 10:00:00</field>
+            <field name="numeroPuertas">0</field>
+            <field name="capacidad_pasajeros">1</field>
+            <field name="tipoCombustible">2</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo23.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Tractor</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo23.jpg" type="base64"></field>
+        </record>
+
+        <record id="vehiculo_24" model="mjiq_taller.vehiculo">
+            <field name="name">Massey Ferguson 7720</field>
+            <field name="matricula">TRC5678</field>
+            <field name="marca">Massey Ferguson</field>
+            <field name="modelo">7720</field>
+            <field name="descripcion">Tractor robusto ideal para labores pesadas.</field>
+            <field name="anio">2020-04-10</field>
+            <field name="color">Rojo</field>
+            <field name="kilometraje">3200</field>
+            <field name="cilindrada">7400</field>
+            <field name="propietario_id" ref="cliente_9"/>
+            <field name="fecha_registro">2024-02-26 11:00:00</field>
+            <field name="numeroPuertas">0</field>
+            <field name="capacidad_pasajeros">1</field>
+            <field name="tipoCombustible">2</field>
+            <field name="transmision">1</field>
+            <field name="estado">1</field>
+            <field name="foto_vehiculo" file="mjiq_taller/static/img/vehiculo24.jpg" type="base64"></field>
+            <field name="tipo_vehiculo">Tractor</field>
+            <field name="test_vista_kanban_imagen" file="mjiq_taller/static/img/vehiculo24.jpg" type="base64"></field>
+        </record>
+
+        <record id="proveedor_1" model="mjiq_taller.proveedor">
+            <field name="name">AutoRepuestos Madrid</field>
+            <field name="identificacion">A12345678</field>
+            <field name="telefono">912345678</field>
+            <field name="email">contacto@autorepuestos.es</field>
+            <field name="direccion">Calle Mayor 45, Madrid, España</field>
+            <field name="estado">0</field>
+        </record>
+
+        <record id="proveedor_2" model="mjiq_taller.proveedor">
+            <field name="name">MotoParts Sevilla</field>
+            <field name="identificacion">B87654321</field>
+            <field name="telefono">955678123</field>
+            <field name="email">info@motopartssevilla.com</field>
+            <field name="direccion">Av. Andalucía 120, Sevilla, España</field>
+            <field name="estado">0</field>
+        </record>
+
+        <record id="proveedor_3" model="mjiq_taller.proveedor">
+            <field name="name">Recambios Valencia</field>
+            <field name="identificacion">C34567890</field>
+            <field name="telefono">963258741</field>
+            <field name="email">ventas@recambiosvalencia.es</field>
+            <field name="direccion">Calle Colón 98, Valencia, España</field>
+            <field name="estado">1</field>
+        </record>
+
+        <record id="proveedor_4" model="mjiq_taller.proveedor">
+            <field name="name">Neumáticos Barcelona</field>
+            <field name="identificacion">D56789012</field>
+            <field name="telefono">932741369</field>
+            <field name="email">soporte@neumaticosbarcelona.com</field>
+            <field name="direccion">Rambla Catalunya 15, Barcelona, España</field>
+            <field name="estado">0</field>
+        </record>
+
+        <record id="proveedor_5" model="mjiq_taller.proveedor">
+            <field name="name">Car Service Bilbao</field>
+            <field name="identificacion">E78901234</field>
+            <field name="telefono">944321654</field>
+            <field name="email">bilbao@carservice.com</field>
+            <field name="direccion">Gran Vía 30, Bilbao, España</field>
+            <field name="estado">1</field>
+        </record>
+        <record id="proveedor_6" model="mjiq_taller.proveedor">
+            <field name="name">Partes y Repuestos SL</field>
+            <field name="identificacion">F65432109</field>
+            <field name="telefono">954123456</field>
+            <field name="email">ventas@partesyrepuestos.com</field>
+            <field name="direccion">Calle Central 20, Madrid, España</field>
+            <field name="estado">0</field>
+        </record>
+
+        <record id="proveedor_7" model="mjiq_taller.proveedor">
+            <field name="name">Autopiezas Express</field>
+            <field name="identificacion">G98765432</field>
+            <field name="telefono">976543210</field>
+            <field name="email">info@autopiezasexpress.com</field>
+            <field name="direccion">Av. del Motor 5, Zaragoza, España</field>
+            <field name="estado">1</field>
+        </record>
+
+        <record id="proveedor_8" model="mjiq_taller.proveedor">
+            <field name="name">MotoRepuestos Valencia</field>
+            <field name="identificacion">H65498732</field>
+            <field name="telefono">963741852</field>
+            <field name="email">contacto@motorepuestosvalencia.com</field>
+            <field name="direccion">Calle Mecánica 18, Valencia, España</field>
+            <field name="estado">0</field>
+        </record>
+
+        <record id="proveedor_9" model="mjiq_taller.proveedor">
+            <field name="name">Ruedas y Más SL</field>
+            <field name="identificacion">I85236974</field>
+            <field name="telefono">932147963</field>
+            <field name="email">soporte@ruedasymas.com</field>
+            <field name="direccion">Paseo de Ruedas 30, Barcelona, España</field>
+            <field name="estado">1</field>
+        </record>
+
+        <record id="proveedor_10" model="mjiq_taller.proveedor">
+            <field name="name">Turbo Motors Bilbao</field>
+            <field name="identificacion">J96325874</field>
+            <field name="telefono">944369258</field>
+            <field name="email">bilbao@turbomotors.com</field>
+            <field name="direccion">Calle del Taller 22, Bilbao, España</field>
+            <field name="estado">0</field>
+        </record>
+
+        <record id="repuesto_1" model="mjiq_taller.repuestos">
+            <field name="name">Filtro de Aceite</field>
+            <field name="codigo">FA1234</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_1"/>
+            <field name="precio">12.50</field>
+            <field name="cantidad_disponible">100</field>
+            <field name="descripcion">Filtro de aceite de alto rendimiento para motores de gasolina.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto1.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_2" model="mjiq_taller.repuestos">
+            <field name="name">Bujías de Encendido</field>
+            <field name="codigo">BE5678</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_2"/>
+            <field name="precio">8.90</field>
+            <field name="cantidad_disponible">200</field>
+            <field name="descripcion">Bujías de encendido de platino para mayor durabilidad.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto2.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_3" model="mjiq_taller.repuestos">
+            <field name="name">Pastillas de Freno</field>
+            <field name="codigo">PF4321</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_3"/>
+            <field name="precio">45.00</field>
+            <field name="cantidad_disponible">50</field>
+            <field name="descripcion">Juego de pastillas de freno de alto rendimiento.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto3.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_4" model="mjiq_taller.repuestos">
+            <field name="name">Amortiguador Delantero</field>
+            <field name="codigo">AD7890</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_4"/>
+            <field name="precio">120.00</field>
+            <field name="cantidad_disponible">20</field>
+            <field name="descripcion">Amortiguador delantero para vehículos de turismo.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto4.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_5" model="mjiq_taller.repuestos">
+            <field name="name">Neumáticos de alta gama</field>
+            <field name="codigo">FA5678</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_5"/>
+            <field name="precio">260.00</field>
+            <field name="cantidad_disponible">80</field>
+            <field name="descripcion">Neumáticos de alta gama para vehiculos deportivos.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto5.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_6" model="mjiq_taller.repuestos">
+            <field name="name">Batería 12V</field>
+            <field name="codigo">B12V8765</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_6"/>
+            <field name="precio">150.00</field>
+            <field name="cantidad_disponible">30</field>
+            <field name="descripcion">Batería de 12V de alta capacidad para coches y furgonetas.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto6.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_7" model="mjiq_taller.repuestos">
+            <field name="name">Correa de Distribución</field>
+            <field name="codigo">CD9987</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_7"/>
+            <field name="precio">70.00</field>
+            <field name="cantidad_disponible">40</field>
+            <field name="descripcion">Correa de distribución reforzada para motores diésel.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto7.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_8" model="mjiq_taller.repuestos">
+            <field name="name">Discos de Freno</field>
+            <field name="codigo">DF3456</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_8"/>
+            <field name="precio">95.50</field>
+            <field name="cantidad_disponible">25</field>
+            <field name="descripcion">Discos de freno ventilados para mayor disipación de calor.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto8.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_9" model="mjiq_taller.repuestos">
+            <field name="name">Termostato</field>
+            <field name="codigo">T6789</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_9"/>
+            <field name="precio">35.20</field>
+            <field name="cantidad_disponible">60</field>
+            <field name="descripcion">Termostato de alta precisión para sistemas de refrigeración.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto9.jpg" type="base64"></field>
+        </record>
+
+        <record id="repuesto_10" model="mjiq_taller.repuestos">
+            <field name="name">Radiador de Agua</field>
+            <field name="codigo">RW3210</field>
+            <field name="proveedor_id" ref="mjiq_taller.proveedor_10"/>
+            <field name="precio">180.00</field>
+            <field name="cantidad_disponible">15</field>
+            <field name="descripcion">Radiador de agua de aluminio para mejorar la refrigeración.</field>
+            <field name="imagen_repuesto" file="mjiq_taller/static/img/repuesto10.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_1" model="mjiq_taller.mecanico">
+            <field name="name">Juan Pérez</field>
+            <field name="edad">35</field>
+            <field name="salario">2500.50</field>
+            <field name="telefono">+34 612 345 678</field>
+            <field name="email">juan.perez@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2015-06-20</field>
+            <field name="experiencia">9</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Mecánica general</field>
+            <field name="cargo">Mecánico Senior</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico1.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico1.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_2" model="mjiq_taller.mecanico">
+            <field name="name">Carlos Gómez</field>
+            <field name="edad">30</field>
+            <field name="salario">1900.00</field>
+            <field name="telefono">+34 689 123 456</field>
+            <field name="email">carlos.gomez@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2018-09-10</field>
+            <field name="experiencia">5</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Electricidad automotriz</field>
+            <field name="cargo">Mecánico Junior</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico2.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico2.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_3" model="mjiq_taller.mecanico">
+            <field name="name">Marta Rodríguez</field>
+            <field name="edad">28</field>
+            <field name="salario">3200.75</field>
+            <field name="telefono">+34 698 987 654</field>
+            <field name="email">marta.rodriguez@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2012-03-15</field>
+            <field name="experiencia">15</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Motores y sistemas de inyección</field>
+            <field name="cargo">Jefe de Taller</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico3.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico3.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_4" model="mjiq_taller.mecanico">
+            <field name="name">Luis Fernández</field>
+            <field name="edad">50</field>
+            <field name="salario">4000.00</field>
+            <field name="telefono">+34 611 789 321</field>
+            <field name="email">luis.fernandez@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2005-07-30</field>
+            <field name="experiencia">25</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Chapa y pintura</field>
+            <field name="cargo">Supervisor Técnico</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico4.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico4.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_5" model="mjiq_taller.mecanico">
+            <field name="name">Ana Morales</field>
+            <field name="edad">23</field>
+            <field name="salario">1200.00</field>
+            <field name="telefono">+34 655 432 198</field>
+            <field name="email">ana.morales@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2022-01-05</field>
+            <field name="experiencia">1</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Becario</field>
+            <field name="cargo">Aprendiz</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico5.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico5.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_6" model="mjiq_taller.mecanico">
+            <field name="name">Pablo Ortega</field>
+            <field name="edad">33</field>
+            <field name="salario">2800.00</field>
+            <field name="telefono">+34 677 654 123</field>
+            <field name="email">pablo.ortega@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2016-11-22</field>
+            <field name="experiencia">8</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Transmisión y embrague</field>
+            <field name="cargo">Mecánico Senior</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico6.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico6.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_7" model="mjiq_taller.mecanico">
+            <field name="name">Elena Ruiz</field>
+            <field name="edad">29</field>
+            <field name="salario">2100.00</field>
+            <field name="telefono">+34 644 789 654</field>
+            <field name="email">elena.ruiz@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2019-04-18</field>
+            <field name="experiencia">4</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Aire acondicionado y climatización</field>
+            <field name="cargo">Mecánico Junior</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico7.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico7.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_8" model="mjiq_taller.mecanico">
+            <field name="name">Roberto Sánchez</field>
+            <field name="edad">42</field>
+            <field name="salario">3500.50</field>
+            <field name="telefono">+34 699 321 654</field>
+            <field name="email">roberto.sanchez@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2010-09-12</field>
+            <field name="experiencia">17</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Mecánica general</field>
+            <field name="cargo">Jefe de Taller</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico8.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico8.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_9" model="mjiq_taller.mecanico">
+            <field name="name">Sergio López</field>
+            <field name="edad">26</field>
+            <field name="salario">1700.00</field>
+            <field name="telefono">+34 633 159 753</field>
+            <field name="email">sergio.lopez@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2020-02-25</field>
+            <field name="experiencia">3</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Electricidad automotriz</field>
+            <field name="cargo">Mecánico Junior</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico9.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico9.jpg" type="base64"></field>
+        </record>
+
+        <record id="mecanico_10" model="mjiq_taller.mecanico">
+            <field name="name">David Martín</field>
+            <field name="edad">45</field>
+            <field name="salario">3800.00</field>
+            <field name="telefono">+34 622 951 357</field>
+            <field name="email">david.martin@mjiq_taller.com</field>
+            <field name="fecha_contratacion">2008-06-14</field>
+            <field name="experiencia">20</field>
+            <field name="activo">True</field>
+            <field name="especialidad">Motores y sistemas de inyección</field>
+            <field name="cargo">Supervisor Técnico</field>
+            <field name="foto_mecanico" file="mjiq_taller/static/img/mecanico10.jpg" type="base64"></field>
+            <field name="preview_image" file="mjiq_taller/static/img/mecanico10.jpg" type="base64"></field>
+        </record>
+
+        <record id="cita_1" model="mjiq_taller.cita">
+            <field name="name">CITA-001</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_1"/>
+            <field name="fecha_cita">2025-03-10 10:00:00</field>
+            <field name="servicio">Cambio del filtro de aceite</field>
+            <field name="precio_total">450.75</field>
+            <field name="estado">0</field>
+            <field name="descripcion">El cliente solicita un cambio del filtro de aceite y revisión general.</field>
+        </record>
+
+        <record id="cita_2" model="mjiq_taller.cita">
+            <field name="name">CITA-002</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_2"/>
+            <field name="fecha_cita">2025-03-11 14:30:00</field>
+            <field name="servicio">Cambio de bujías de encendido</field>
+            <field name="precio_total">320.00</field>
+            <field name="estado">1</field>
+            <field name="descripcion">El cliente menciona ruido y larga espera al encender el vehiculo.</field>
+        </record>
+
+        <record id="cita_3" model="mjiq_taller.cita">
+            <field name="name">CITA-003</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_3"/>
+            <field name="fecha_cita">2025-03-12 09:00:00</field>
+            <field name="servicio">Cambio de pastillas de freno</field>
+            <field name="precio_total">725.50</field>
+            <field name="estado">3</field>
+            <field name="descripcion">Cita cancelada, el cliente solucionó el problema por su cuenta.</field>
+        </record>
+
+        <record id="cita_4" model="mjiq_taller.cita">
+            <field name="name">CITA-004</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_4"/>
+            <field name="fecha_cita">2025-03-13 16:00:00</field>
+            <field name="servicio">Sustitución del amortiguador delantero</field>
+            <field name="precio_total">580.40</field>
+            <field name="estado">2</field>
+            <field name="descripcion">Servicio completado sin inconvenientes.</field>
+        </record>
+
+        <record id="cita_5" model="mjiq_taller.cita">
+            <field name="name">CITA-005</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_5"/>
+            <field name="fecha_cita">2025-03-14 11:15:00</field>
+            <field name="servicio">Cambio de neumáticos</field>
+            <field name="precio_total">1020.00</field>
+            <field name="estado">1</field>
+            <field name="descripcion">Se solicitaron neumáticos de alta gama.</field>
+        </record>
+
+        <record id="cita_6" model="mjiq_taller.cita">
+            <field name="name">CITA-006</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_6"/>
+            <field name="fecha_cita">2025-03-15 13:45:00</field>
+            <field name="servicio">Diagnóstico eléctrico y sustitución de batería</field>
+            <field name="precio_total">215.30</field>
+            <field name="estado">0</field>
+            <field name="descripcion">Problemas con las luces del tablero y batería descargada.</field>
+        </record>
+
+        <record id="cita_7" model="mjiq_taller.cita">
+            <field name="name">CITA-007</field>
+            <field name="cliente_id" ref="cliente_7"/>
+            <field name="fecha_cita">2025-03-16 08:30:00</field>
+            <field name="servicio">Cambio de correa de distribución</field>
+            <field name="precio_total">410.90</field>
+            <field name="estado">3</field>
+            <field name="descripcion">Se realizó el cambio con éxito, sin daños colaterales.</field>
+        </record>
+
+        <record id="cita_8" model="mjiq_taller.cita">
+            <field name="name">CITA-008</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_8"/>
+            <field name="fecha_cita">2025-03-17 17:00:00</field>
+            <field name="servicio">Cambio de discos de frenos</field>
+            <field name="precio_total">880.75</field>
+            <field name="estado">1</field>
+            <field name="descripcion">El cliente pidió una revisión adicional del sistema hidráulico.</field>
+        </record>
+
+        <record id="cita_9" model="mjiq_taller.cita">
+            <field name="name">CITA-009</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_9"/>
+            <field name="fecha_cita">2025-03-18 10:45:00</field>
+            <field name="servicio">Revisión del termostato</field>
+            <field name="precio_total">765.80</field>
+            <field name="estado">0</field>
+            <field name="descripcion">Termostato con mala graduación sujerencia de sustitución por uno nuevo.</field>
+        </record>
+
+        <record id="cita_10" model="mjiq_taller.cita">
+            <field name="name">CITA-010</field>
+            <field name="cliente_id" ref="mjiq_taller.cliente_10"/>
+            <field name="fecha_cita">2025-03-19 15:30:00</field>
+            <field name="servicio">Revisión general y mantenimiento</field>
+            <field name="precio_total">1325.99</field>
+            <field name="estado">2</field>
+            <field name="descripcion">En la revisión se cambio el radiador de agua por un problema con la distribución.</field>
+        </record>
+
+        <record id="factura_1" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-001</field>
+            <field name="cliente_id" ref="cliente_1"/>
+            <field name="cita_id" ref="cita_1"/>
+            <field name="fecha_emision">2025-01-10</field>
+            <field name="total">450.75</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">1</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_1')), (4, ref('proveedor_2'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_1'))]"/>
+        </record>
+
+        <record id="factura_2" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-002</field>
+            <field name="cliente_id" ref="cliente_2"/>
+            <field name="cita_id" ref="cita_2"/>
+            <field name="fecha_emision">2025-01-15</field>
+            <field name="total">320.00</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">2</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_3'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_2'))]"/>
+        </record>
+
+        <record id="factura_3" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-003</field>
+            <field name="cliente_id" ref="cliente_3"/>
+            <field name="cita_id" ref="cita_3"/>
+            <field name="fecha_emision">2025-01-20</field>
+            <field name="total">725.50</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">0</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_2')), (4, ref('proveedor_4'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_3'))]"/>
+        </record>
+
+        <record id="factura_4" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-004</field>
+            <field name="cliente_id" ref="cliente_4"/>
+            <field name="cita_id" ref="cita_4"/>
+            <field name="fecha_emision">2025-02-01</field>
+            <field name="total">580.40</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">3</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_5'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_4'))]"/>
+        </record>
+
+        <record id="factura_5" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-005</field>
+            <field name="cliente_id" ref="cliente_5"/>
+            <field name="cita_id" ref="cita_5"/>
+            <field name="fecha_emision">2025-02-10</field>
+            <field name="total">1020.00</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">1</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_6')), (4, ref('proveedor_7'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_5'))]"/>
+        </record>
+
+        <record id="factura_6" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-006</field>
+            <field name="cliente_id" ref="cliente_6"/>
+            <field name="cita_id" ref="cita_6"/>
+            <field name="fecha_emision">2025-02-15</field>
+            <field name="total">215.30</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">2</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_8'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_6'))]"/>
+        </record>
+
+        <record id="factura_7" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-007</field>
+            <field name="cliente_id" ref="cliente_7"/>
+            <field name="cita_id" ref="cita_7"/>
+            <field name="fecha_emision">2025-02-20</field>
+            <field name="total">410.90</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">0</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_9'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_7'))]"/>
+        </record>
+
+        <record id="factura_8" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-008</field>
+            <field name="cliente_id" ref="cliente_8"/>
+            <field name="cita_id" ref="cita_8"/>
+            <field name="fecha_emision">2025-02-25</field>
+            <field name="total">880.75</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">1</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_10'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_8'))]"/>
+        </record>
+        <record id="factura_9" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-009</field>
+            <field name="cliente_id" ref="cliente_9"/>
+            <field name="cita_id" ref="cita_9"/>
+            <field name="fecha_emision">2025-03-05</field>
+            <field name="total">765.80</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">3</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_3')), (4, ref('proveedor_7'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_9'))]"/>
+        </record>
+
+        <record id="factura_10" model="mjiq_taller.factura">
+            <field name="name">FAC-2025-010</field>
+            <field name="cliente_id" ref="cliente_10"/>
+            <field name="cita_id" ref="cita_10"/>
+            <field name="fecha_emision">2025-03-10</field>
+            <field name="total">1325.99</field>
+            <field name="currency_id" ref="base.EUR"/>
+            <field name="estado">1</field>
+            <field name="proveedor_ids" eval="[(4, ref('proveedor_2')), (4, ref('proveedor_5')), (4, ref('proveedor_8'))]"/>
+            <field name="repuestos_ids" eval="[(4, ref('repuesto_10'))]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,127 @@
+<odoo>
+  <data>
+    <!-- Vista de árbol (tree) -->
+    <record id="mjiq_taller.cliente_tree" model="ir.ui.view">
+      <field name="name">mjiq_taller.cliente.tree</field>
+      <field name="model">mjiq_taller.cliente</field>
+      <field name="arch" type="xml">
+        <tree string="Cliente" editable="bottom">
+          <field name="name"/>
+          <field name="dni"/>
+          <field name="telefono"/>
+          <field name="correo"/>
+          <field name="direccion"/>
+          <field name="vehiculo_ids" widget="many2many_tags"/>
+          <field name="cita_ids" widget="many2many_tags"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de formulario (form) -->
+    <record id="mjiq_taller.cliente_form" model="ir.ui.view">
+      <field name="name">mjiq_taller.cliente.form</field>
+      <field name="model">mjiq_taller.cliente</field>
+      <field name="arch" type="xml">
+        <form string="Cliente">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="dni"/>
+              <field name="telefono"/>
+              <field name="correo"/>
+              <field name="direccion"/>
+            </group>
+            <notebook>
+              <page string="Vehículos">
+                <field name="vehiculo_ids">
+                  <tree>
+                    <field name="marca"/>
+                    <field name="modelo"/>
+                    <field name="matricula"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Citas">
+                <field name="cita_ids">
+                  <tree>
+                    <field name="fecha_cita"/>
+                    <field name="servicio"/>
+                    <field name="estado"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="message_ids" widget="mail_thread"/>
+            <field name="activity_ids" widget="mail_activity"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vista de kanban -->
+    <record id="mjiq_taller.cliente_kanban" model="ir.ui.view">
+      <field name="name">mjiq_taller.cliente.kanban</field>
+      <field name="model">mjiq_taller.cliente</field>
+      <field name="arch" type="xml">
+        <kanban class="o_kanban_view o_kanban_small">
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_card oe_kanban_global_click">
+                <div class="o_kanban_content">
+                  <strong><field name="name"/></strong>
+                  <div class="o_kanban_image" t-if="record.image_128">
+                    <img t-att-src="'/web/image/mjiq_taller.cliente/' + record.id.raw_value + '/image_128'" class="rounded-circle" width="40" height="40"/>
+                  </div>
+                  <div><span class="fa fa-id-card"/> <field name="dni"/></div>
+                  <div><span class="fa fa-phone"/> <field name="telefono"/></div>
+                  <div><span class="fa fa-envelope"/> <field name="correo"/></div>
+                  <div><span class="fa fa-map-marker"/> <field name="direccion"/></div>
+                  
+                  <t t-if="record.vehiculo_ids and record.vehiculo_ids.length">
+                    <div class="oe_kanban_tags">
+                      <strong>Vehículos:</strong>
+                      <t t-foreach="record.vehiculo_ids" t-as="vehiculo">
+                        <span class="o_tag o_tag_medium"> <t t-esc="vehiculo.marca"/> - <t t-esc="vehiculo.modelo"/> </span>
+                      </t>
+                    </div>
+                  </t>
+                  
+                  <t t-if="record.cita_ids and record.cita_ids.length">
+                    <div class="oe_kanban_tags">
+                      <strong>Citas:</strong>
+                      <t t-foreach="record.cita_ids" t-as="cita">
+                        <span class="o_tag o_tag_medium" t-att-class="cita.estado.raw_value"> <t t-esc="cita.fecha_cita"/> - <t t-esc="cita.servicio"/> </span>
+                      </t>
+                    </div>
+                  </t>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <!-- Vista de actividad (activity) -->
+    <record id="mjiq_taller.cliente_activity" model="ir.ui.view">
+      <field name="name">mjiq_taller.cliente.activity</field>
+      <field name="model">mjiq_taller.cliente</field>
+      <field name="arch" type="xml">
+        <activity string="Actividades del Cliente">
+          <templates>
+            <div t-name="activity-box">
+              <div class="o_activity_view">
+                <div class="o_activity_summary">
+                  <field name="activity_ids" widget="activity"/>
+                </div>
+              </div>
+            </div>
+          </templates>
+        </activity>
+      </field>
+    </record>
+  </data>
+</odoo>

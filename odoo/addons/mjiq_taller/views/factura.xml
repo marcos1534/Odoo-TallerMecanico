@@ -1,0 +1,116 @@
+<odoo>
+  <data>
+    <!-- Vista en Árbol -->
+    <record id="mjiq_taller.factura_tree" model="ir.ui.view">
+      <field name="name">mjiq_taller.factura.tree</field>
+      <field name="model">mjiq_taller.factura</field>
+      <field name="arch" type="xml">
+        <tree string="Facturas" editable="bottom">
+          <field name="name"/>
+          <field name="cliente_id"/>
+          <field name="cita_id"/>
+          <field name="proveedor_ids" widget="many2many_tags"/>
+          <field name="fecha_emision"/>
+          <field name="total"/>
+          <field name="currency_id"/>
+          <field name="estado" widget="statusbar"/>
+          <field name="dias_desde_emision"/>
+          <field name="cantidad_proveedores"/>
+          <field name="company_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista en Formulario -->
+    <record id="mjiq_taller.factura_form" model="ir.ui.view">
+      <field name="name">mjiq_taller.factura.form</field>
+      <field name="model">mjiq_taller.factura</field>
+      <field name="arch" type="xml">
+        <form string="Factura">
+          <header>
+            <button name="action_imprimir_informe"
+                    string="Imprimir Factura"
+                    type="object"
+                    class="oe_highlight btn-primary btn-lg"
+                    icon="fa-print"/>
+          </header>
+          <sheet>
+            <group>
+              <group>
+                <field name="name"/>
+                <field name="cliente_id"/>
+                <field name="cita_id"/>
+                <field name="company_id"/>
+              </group>
+              <group>
+                <field name="fecha_emision"/>
+                <field name="estado" widget="statusbar"/>
+                <field name="dias_desde_emision" readonly="1"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Proveedores">
+                <field name="proveedor_ids">
+                  <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="telefono"/>
+                  </tree>
+                </field>
+                <field name="cantidad_proveedores" readonly="1"/>
+              </page>
+              <page string="Detalles">
+                <group>
+                  <field name="total"/>
+                  <field name="currency_id"/>
+                  <field name="repuestos_ids" widget="many2many_tags"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vista en Kanban -->
+    <record id="mjiq_taller.factura_kanban" model="ir.ui.view">
+      <field name="name">mjiq_taller.factura.kanban</field>
+      <field name="model">mjiq_taller.factura</field>
+      <field name="arch" type="xml">
+        <kanban class="o_kanban_view o_kanban_small">
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_card oe_kanban_global_click">
+                <div class="o_kanban_content">
+                  <strong class="o_kanban_record_title"><field name="name"/></strong>
+                  <div><span class="fa fa-user text-muted"/> <field name="cliente_id"/></div>
+                  <div><span class="fa fa-calendar text-muted"/> <field name="fecha_emision"/></div>
+                  <div><span class="fa fa-money text-success"/> <field name="total"/> <field name="currency_id"/></div>
+                  <div><span class="fa fa-industry text-muted"/> Nº Proveedores: <field name="cantidad_proveedores"/></div>
+                  <div class="o_kanban_status">
+                    <span class="o_tag o_tag_medium" t-att-class="'o_tag_' + record.estado.raw_value">
+                      <field name="estado"/>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <!-- Vista en Gráfico -->
+    <record id="mjiq_taller.factura_graph" model="ir.ui.view">
+      <field name="name">mjiq_taller.factura.graph</field>
+      <field name="model">mjiq_taller.factura</field>
+      <field name="arch" type="xml">
+        <graph string="Facturación Mensual" type="bar">
+          <field name="fecha_emision" interval="month" type="row"/>
+          <field name="total" type="measure"/>
+          <field name="estado" type="col"/>
+          <field name="cliente_id" type="row"/>
+        </graph>
+      </field>
+    </record>
+  </data>
+</odoo>

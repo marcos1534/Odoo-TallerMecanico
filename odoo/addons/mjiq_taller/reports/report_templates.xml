@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <template id="custom_invoice_section">
+            <t t-if="doc.cita_id">
+                <div>
+                    <h3 style="color: #2C3E50;">Información Adicional</h3>
+                    <p><strong>Descripción de la Cita:</strong> <t t-esc="doc.cita_id.descripcion"/></p>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

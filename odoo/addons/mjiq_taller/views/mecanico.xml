@@ -1,0 +1,133 @@
+<odoo>
+  <data>
+      <record id="mjiq_taller.mecanico_tree" model="ir.ui.view">
+        <field name="name">mjiq_taller.mecanico.tree</field>
+        <field name="model">mjiq_taller.mecanico</field>
+        <field name="arch" type="xml">
+          <tree string="Mecanico">
+            <field name="foto_mecanico" widget="image" options="{'width': 50, 'height': 50}"></field>
+            <field name="name"></field>
+            <field name="edad"></field>
+            <field name="salario"></field>
+            <field name="telefono"></field>
+            <field name="email"></field>
+            <field name="fecha_contratacion"></field>
+            <field name="experiencia"></field>
+            <field name="activo"></field>
+            <field name="especialidad"></field>
+            <field name="cargo"></field>
+          </tree>
+        </field>
+    </record>
+
+    <record id="mjiq_taller.mecanico_form" model="ir.ui.view">
+      <field name="name">mjiq_taller.mecanico.form</field>
+      <field name="model">mjiq_taller.mecanico</field>
+      <field name="arch" type="xml">
+        <form string="Mecanico">
+          <sheet>
+            <group>
+              <group>
+                <field name="foto_mecanico" widget="image" options="{'size': [512, 480]}"/>
+                <field name="name" placeholder="Ej. Juan Pérez"/>
+                <field name="cargo"/>
+                <field name="especialidad"/>
+                <field name="activo" widget="boolean_toggle"/>
+              </group>
+              <group>
+                <field name="telefono"/>
+                <field name="email"/>
+                <field name="fecha_contratacion" widget="date"/>
+                <field name="experiencia"/>
+                <field name="salario" widget="monetary"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Detalles">
+                <group>
+                  <field name="edad"/>
+                  <field name="activo" widget="boolean_toggle"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="mjiq_taller.mecanico_kanban" model="ir.ui.view">
+      <field name="name">mjiq_taller.mecanico.kanban</field>
+      <field name="model">mjiq_taller.mecanico</field>
+      <field name="arch" type="xml">
+        <kanban class="o_kanban_view o_kanban_small">
+          <field name="preview_image"/> <!-- Cambia foto_mecanico por preview_image -->
+          <field name="name"/>
+          <field name="cargo"/>
+          <field name="especialidad"/>
+          <field name="telefono"/>
+          <field name="email"/>
+          <field name="fecha_contratacion"/>
+          <field name="salario"/>
+          <field name="activo"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div t-att-class="'oe_kanban_global_click o_kanban_record ' + (record.activo.raw_value ? 'o_kanban_success' : 'o_kanban_danger')"
+                  style="border: 1px solid #ddd; border-radius: 10px; padding: 10px; background-color: #f9f9f9;">
+                <div class="d-flex align-items-center">
+                  <!-- Imagen del mecánico -->
+                  <div style="width: 80px; height: 80px; overflow: hidden; border-radius: 50%; margin-right: 10px;">
+                    <img t-att-src="'/web/image?model=mjiq_taller.mecanico&amp;id=' + record.id.raw_value + '&amp;field=preview_image'"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"/>
+                  </div>
+                  <!-- Detalles del mecánico -->
+                  <div style="flex: 1;">
+                    <strong class="d-block" style="font-size: 14px; color: #333;">
+                      <t t-esc="record.name.raw_value or 'Sin nombre'"/>
+                    </strong>
+                    <div style="font-size: 12px; color: #555; margin-top: 5px;">
+                      <span class="fa fa-briefcase" style="margin-right: 5px;"></span>
+                      <t t-esc="record.cargo.raw_value or ''"/>
+                    </div>
+                    <div style="font-size: 12px; color: #555; margin-top: 5px;">
+                      <span class="fa fa-wrench" style="margin-right: 5px;"></span>
+                      <t t-esc="record.especialidad.raw_value or ''"/>
+                    </div>
+                    <div style="font-size: 12px; color: #777; margin-top: 5px;">
+                      <span class="fa fa-phone" style="margin-right: 5px;"></span>
+                      <t t-esc="record.telefono.raw_value or ''"/>
+                    </div>
+                    <div style="font-size: 12px; color: #777; margin-top: 5px;">
+                      <span class="fa fa-envelope" style="margin-right: 5px;"></span>
+                      <t t-esc="record.email.raw_value or ''"/>
+                    </div>
+                    <div style="font-size: 12px; color: #777; margin-top: 5px;">
+                      <span class="fa fa-calendar" style="margin-right: 5px;"></span>
+                      <t t-esc="record.fecha_contratacion.raw_value or ''"/>
+                    </div>
+                    <div style="font-size: 12px; color: #777; margin-top: 5px;">
+                      <span class="fa fa-money" style="margin-right: 5px;"></span>
+                      <t t-esc="record.salario.raw_value or ''"/>
+                    </div>
+                    <!-- Estado activo/inactivo -->
+                    <div style="margin-top: 5px;">
+                      <t t-if="record.activo.raw_value">
+                        <div class="badge mt-1" style="background-color: #28a745; color: white;">
+                          Activo
+                        </div>
+                      </t>
+                      <t t-else="">
+                        <div class="badge mt-1" style="background-color: #dc3545; color: white;">
+                          Inactivo
+                        </div>
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+  </data>
+</odoo>

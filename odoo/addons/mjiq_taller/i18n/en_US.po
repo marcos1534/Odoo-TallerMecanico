@@ -1,0 +1,1159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mjiq_taller
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241125\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-03 09:40+0000\n"
+"PO-Revision-Date: 2025-03-03 13:47+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: mjiq_taller
+#: model:ir.actions.report,print_report_name:mjiq_taller.factura_report_action
+msgid "'Informe_Factura_'+ object.name"
+msgstr "'Invoice_report_'+ object.name"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_kanban
+msgid ""
+"<span class=\"fa fa-barcode\" style=\"color: #5a5a5a; margin-right: 5px;\"/>\n"
+"                                  <b>Código: </b>"
+msgstr ""
+"<span class=\"fa fa-barcode\" style=\"color: #5a5a5a; margin-right: 5px;\"/>\n"
+"                                  <b>Code: </b>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_kanban
+msgid ""
+"<span class=\"fa fa-cogs\" style=\"margin-right: 5px;\"/>\n"
+"                                  <b>Stock: </b>"
+msgstr ""
+"<span class=\"fa fa-cogs\" style=\"margin-right: 5px;\"/>\n"
+"                                  <b>Stock: </b>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_kanban
+msgid ""
+"<span class=\"fa fa-euro-sign\" style=\"margin-right: 5px;\"/>\n"
+"                                  <b>Precio: </b>"
+msgstr ""
+"<span class=\"fa fa-euro-sign\" style=\"margin-right: 5px;\"/>\n"
+"                                  <b>Price: </b>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.factura_kanban
+msgid "<span class=\"fa fa-industry text-muted\"/> Nº Proveedores:"
+msgstr "<span class=\"fa fa-industry text-muted\"/> Nº Suppliers:"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_kanban
+msgid ""
+"<span class=\"fa fa-industry\" style=\"color: #5a5a5a; margin-right: 5px;\"/>\n"
+"                                  <b>Proveedor: </b>"
+msgstr ""
+"<span class=\"fa fa-industry\" style=\"color: #5a5a5a; margin-right: 5px;\"/>\n"
+"                                  <b>Supplier: </b>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_kanban
+msgid "<span style=\"font-size: 20px; color: #888;\">📸</span>"
+msgstr "<span style=\"font-size: 20px; color: #888;\">📸</span>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cliente_kanban
+msgid "<strong>Citas:</strong>"
+msgstr "<strong>Appointments:</strong>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "<strong>Cliente:</strong>"
+msgstr "<strong>Client:</strong>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "<strong>Estado:</strong>"
+msgstr "<strong>Status:</strong>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "<strong>Fecha de emisión:</strong>"
+msgstr "<strong>Release date:</strong>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "<strong>Servicio(s):</strong>"
+msgstr "<strong>Service(s):</strong>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "<strong>Total:</strong>"
+msgstr "<strong>Total:</strong>"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cliente_kanban
+msgid "<strong>Vehículos:</strong>"
+msgstr "<strong>Vehicles:</strong>"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_needaction
+msgid "Action Needed"
+msgstr "Action Needed"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cliente_activity
+msgid "Actividades del Cliente"
+msgstr "Client Activities"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_ids
+msgid "Activities"
+msgstr "Activities"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activity Exception Decoration"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_state
+msgid "Activity State"
+msgstr "Activity State"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Activity Type Icon"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__activo
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_proveedor__estado__0
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.mecanico_kanban
+msgid "Activo"
+msgstr "Active"
+
+#. module: mjiq_taller
+#: model:res.groups,name:mjiq_taller.group_admin_taller
+msgid "Administrador del Taller"
+msgstr "Workshop Manager"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__especialidad__aire_acondicionado_y_climatización
+msgid "Aire acondicionado y climatización"
+msgstr "Air conditioning and climate control"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_pivot
+msgid "Análisis de Repuestos"
+msgstr "Spare Parts Analysis"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__cargo__aprendiz
+msgid "Aprendiz"
+msgstr "Apprentice"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_attachment_count
+msgid "Attachment Count"
+msgstr "Attachment Count"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipo_vehiculo__autobús
+msgid "Autobús"
+msgstr "Bus"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__transmision__1
+msgid "Automática"
+msgstr "Automatic"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cita_form
+msgid "Añadir notas adicionales..."
+msgstr "Add additional notes..."
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__anio_formateado
+msgid "Año Formateado"
+msgstr "Formatted Year"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__anio
+msgid "Año de fabricación del vehiculo"
+msgstr "Year of manufacture of the vehicle"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__experiencia
+msgid "Años de experiencia"
+msgstr "Years of experience"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__especialidad__becario
+msgid "Becario"
+msgstr "Scholar"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_factura__estado__0
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Borrador"
+msgstr "Draft"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipo_vehiculo__camión
+msgid "Camión"
+msgstr "Truck"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_cita__estado__2
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_factura__estado__3
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Cancelada"
+msgstr "Cancelled"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__cantidad_disponible
+msgid "Cantidad Disponible"
+msgstr "Available Quantity"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__capacidad_pasajeros
+msgid "Capacidad de Pasajeros"
+msgstr "Passenger Capacity"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__cargo
+msgid "Cargo"
+msgstr "Post"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__especialidad__chapa_y_pintura
+msgid "Chapa y pintura"
+msgstr "Bodywork and paint"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__cilindrada
+msgid "Cilindrada del vehiculo"
+msgstr "Vehicle displacement"
+
+#. module: mjiq_taller
+#: model:ir.actions.act_window,name:mjiq_taller.cita_action
+#: model:ir.model,name:mjiq_taller.model_mjiq_taller_cita
+#: model:ir.ui.menu,name:mjiq_taller.cita_menu
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cita_form
+msgid "Cita"
+msgstr "Appointment"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__cita_id
+msgid "Cita Relacionada"
+msgstr "Related Quote"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__cita_ids
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cita_calendar
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cita_tree
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cliente_form
+msgid "Citas"
+msgstr "Quotes"
+
+#. module: mjiq_taller
+#: model:ir.actions.act_window,name:mjiq_taller.cliente_action
+#: model:ir.model,name:mjiq_taller.model_mjiq_taller_cliente
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__cliente_id
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__cliente_id
+#: model:ir.ui.menu,name:mjiq_taller.cliente_menu
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cliente_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cliente_tree
+msgid "Cliente"
+msgstr "Customer"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipo_vehiculo__coche
+msgid "Coche"
+msgstr "Car"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__color
+msgid "Color del vehiculo"
+msgstr "Color of the vehicle"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__company_id
+msgid "Compañía"
+msgstr "Company"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_cita__estado__3
+msgid "Completada"
+msgstr "Completed"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_cita__estado__1
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_factura__estado__1
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Confirmada"
+msgstr "Confirmed"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__correo
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__email
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__email
+msgid "Correo Electrónico"
+msgstr "Email"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__create_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__create_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__create_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__create_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__create_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__create_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__create_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__create_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__create_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__create_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__create_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__create_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_tree
+msgid "Código"
+msgstr "Code"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__codigo
+msgid "Código del Repuesto"
+msgstr "Spare Part Code"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__dni
+msgid "DNI"
+msgstr "DNI"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__descripcion
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__descripcion
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__descripcion
+msgid "Descripción"
+msgstr "Description"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cita_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.factura_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.mecanico_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_form
+msgid "Detalles"
+msgstr "Details"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Detalles del Servicio"
+msgstr "Service Details"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__dias_desde_emision
+msgid "Dias desde emisión"
+msgstr "Days since broadcast"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__direccion
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__direccion
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_tree
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Dirección"
+msgstr "Address"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__display_name
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__display_name
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__display_name
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__display_name
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__display_name
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__display_name
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipoCombustible__1
+msgid "Diésel"
+msgstr "Diesel"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__edad
+msgid "Edad del mecánico"
+msgstr "Age of the mechanic"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cita_form
+msgid "Ej. Cita para revisión..."
+msgstr "Example: Appointment for review..."
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.mecanico_form
+msgid "Ej. Juan Pérez"
+msgstr "Example: John Perez"
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_cliente_unique_dni
+msgid "El DNI ya está registrado en el sistema."
+msgstr "The DNI is already registered in the system."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_mecanico_unique_email
+msgid "El correo electrónico ya está registrado en otro mecánico."
+msgstr "The email is already registered with another mechanic."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_proveedor_unique_email
+msgid "El correo electrónico ya está registrado en otro proveedor."
+msgstr "The email is already registered with another provider."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_repuestos_unique_codigo
+msgid "El código del repuesto debe ser único."
+msgstr "The spare part code must be unique."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_vehiculo_check_kilometraje_positive
+msgid "El kilometraje no puede ser negativo."
+msgstr "Mileage cannot be negative."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_vehiculo_check_numero_puertas
+msgid "El número de puertas no puede ser negativo."
+msgstr "The number of doors cannot be negative."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_repuestos_check_precio_positive
+msgid "El precio debe ser mayor a 0."
+msgstr "The price must be greater than 0."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_mecanico_check_salario_positive
+msgid "El salario no puede ser negativo."
+msgstr "The salary cannot be negative."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_factura_check_total_positive
+msgid "El total de la factura no puede ser negativo."
+msgstr "The total of the invoice cannot be negative."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_vehiculo_check_capacidad_pasajeros
+msgid "El vehículo debe tener al menos un pasajero."
+msgstr "The vehicle must have at least one passenger."
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__especialidad__electricidad_automotriz
+msgid "Electricidad automotriz"
+msgstr "Automotive electricity"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipoCombustible__2
+msgid "Eléctrico"
+msgstr "Eléctrico"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_tree
+msgid "Email"
+msgstr "E-mail"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__estado__2
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_search
+msgid "En Reparación"
+msgstr "Under Repair"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__especialidad
+msgid "Especialidad"
+msgstr "Specialty"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_form
+msgid "Especificaciones"
+msgstr "Specs"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__estado
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__estado
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__estado
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__estado
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_tree
+msgid "Estado"
+msgstr "State"
+
+#. module: mjiq_taller
+#: model:ir.actions.act_window,name:mjiq_taller.factura_action
+#: model:ir.model,name:mjiq_taller.model_mjiq_taller_factura
+#: model:ir.ui.menu,name:mjiq_taller.factura_menu
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.factura_form
+msgid "Factura"
+msgstr "Invoice"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Factura:"
+msgstr "Invoice:"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.factura_graph
+msgid "Facturación Mensual"
+msgstr "Monthly Billing"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__factura_ids
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.factura_tree
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+msgid "Facturas"
+msgstr "Invoices"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__factura_ids
+msgid "Facturas Asociadas"
+msgstr "Associated Invoices"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_form
+msgid "Facturas Relacionadas"
+msgstr "Related Invoices"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__fecha_emision
+msgid "Fecha de Emisión"
+msgstr "Start Date"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__fecha_registro
+msgid "Fecha de Registro"
+msgstr "Registration Date"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__fecha_contratacion
+msgid "Fecha de contratación"
+msgstr "Hiring date"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__fecha_cita
+msgid "Fecha de la Cita"
+msgstr "Appointment Date"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_search
+msgid "Filtrar por"
+msgstr "Filter by"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_search
+msgid "Filtrar por Marca"
+msgstr "Filter by brand"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_follower_ids
+msgid "Followers"
+msgstr "Followers"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Followers (Partners)"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome icon e.g. fa-tasks"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__imagen_repuesto
+msgid "Foto Repuesto"
+msgstr "Photo Replacement"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__foto_vehiculo
+msgid "Foto del Coche"
+msgstr "Car Photo"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__foto_mecanico
+msgid "Foto del mecánico"
+msgstr "Photo of the mechanic"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipo_vehiculo__furgoneta
+msgid "Furgoneta"
+msgstr "Van"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipoCombustible__0
+msgid "Gasolina"
+msgstr "Gasoline"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Gracias por confiar en nuestro taller mecánico."
+msgstr "Thank you for trusting our mechanic's workshop."
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipo_vehiculo__grúa
+msgid "Grúa"
+msgstr "Crane"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__has_message
+msgid "Has Message"
+msgstr "Has Message"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cita_form
+msgid "Historial de Citas"
+msgstr "Appointment History"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipoCombustible__3
+msgid "Híbrido"
+msgstr "Hybrid"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__id
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__id
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__id
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__id
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__id
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__id
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_exception_icon
+msgid "Icon"
+msgstr "Icon"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icon to indicate an exception activity."
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__identificacion
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_tree
+msgid "Identificación"
+msgstr "Identification"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "If checked, new messages require your attention."
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__message_has_error
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "If checked, some messages have a delivery error."
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Imagen"
+msgstr "Image"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__test_vista_kanban_imagen
+msgid "Imagen de Kanban"
+msgstr "Kanban image"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__preview_image
+msgid "Imagen de Vista Previa"
+msgstr "Preview Image"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_tree
+msgid "Importe Total"
+msgstr "Total Amount"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__importe_total
+msgid "Importe total"
+msgstr "Total amount"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.factura_form
+msgid "Imprimir Factura"
+msgstr "Print Invoice"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_proveedor__estado__1
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.mecanico_kanban
+msgid "Inactivo"
+msgstr "Idle"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+msgid "Información Adicional"
+msgstr "Additional information"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+msgid "Información Básica"
+msgstr "Basic Information"
+
+#. module: mjiq_taller
+#: model:ir.actions.report,name:mjiq_taller.factura_report_action
+msgid "Informe Factura"
+msgstr "Invoice Report"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_is_follower
+msgid "Is Follower"
+msgstr "Is Follower"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__cargo__jefe_de_taller
+msgid "Jefe de Taller"
+msgstr "Workshop Manager"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__kilometraje
+msgid "Kilometraje del vehiculo"
+msgstr "Vehicle mileage"
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_proveedor_unique_identificacion
+msgid "La identificación del proveedor debe ser única."
+msgstr "The supplier ID must be unique."
+
+#. module: mjiq_taller
+#: model:ir.model.constraint,message:mjiq_taller.constraint_mjiq_taller_vehiculo_unique_matricula
+msgid "La matrícula debe ser única."
+msgstr "The registration must be unique."
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__write_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__write_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__write_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__write_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__write_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__write_uid
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__write_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__write_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__write_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__write_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__write_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__write_date
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__transmision__0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__marca
+msgid "Marca"
+msgstr "Brand"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__matricula
+msgid "Matricula"
+msgstr "Plate"
+
+#. module: mjiq_taller
+#: model:ir.actions.act_window,name:mjiq_taller.mecanico_action
+#: model:ir.ui.menu,name:mjiq_taller.mecanico_menu
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.mecanico_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.mecanico_tree
+msgid "Mecanico"
+msgstr "Mechanic"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__especialidad__mecánica_general
+msgid "Mecánica general"
+msgstr "General mechanics"
+
+#. module: mjiq_taller
+#: model:ir.model,name:mjiq_taller.model_mjiq_taller_mecanico
+#: model:res.groups,name:mjiq_taller.group_mecanico
+msgid "Mecánico"
+msgstr "Mechanic"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__cargo__mecánico_junior
+msgid "Mecánico Junior"
+msgstr "Junior Mechanic"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__cargo__mecánico_senior
+msgid "Mecánico Senior"
+msgstr "Senior Mechanic"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_has_error
+msgid "Message Delivery error"
+msgstr "Message Delivery error"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__modelo
+msgid "Modelo"
+msgstr "Model"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__currency_id
+msgid "Moneda"
+msgstr "Currency"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipo_vehiculo__motocicleta
+msgid "Motocicleta"
+msgstr "Motorcycle"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__especialidad__motores_y_sistemas_de_inyección
+msgid "Motores y sistemas de inyección"
+msgstr "Engines and injection systems"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "My Activity Deadline"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Next Activity Deadline"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_summary
+msgid "Next Activity Summary"
+msgstr "Next Activity Summary"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_type_id
+msgid "Next Activity Type"
+msgstr "Next Activity Type"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_tree
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_tree
+msgid "Nombre"
+msgstr "Name"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__name
+msgid "Nombre del Proveedor"
+msgstr "Supplier Name"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__name
+msgid "Nombre del Repuesto"
+msgstr "Spare Part Name"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__name
+msgid "Nombre del Vehículo"
+msgstr "Vehicle Name"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__name
+msgid "Nombre del cliente"
+msgstr "Client Name"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__name
+msgid "Nombre del mecánico"
+msgstr "Name of mechanic"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__estado__0
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_search
+msgid "Nuevo"
+msgstr "New"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Number of Actions"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_has_error_counter
+msgid "Number of errors"
+msgstr "Number of errors"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Number of messages requiring action"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Number of messages with delivery error"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__name
+msgid "Número de Factura"
+msgstr "Invoice Number"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__cantidad_proveedores
+msgid "Número de Proveedores"
+msgstr "Number of Suppliers"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__numeroPuertas
+msgid "Número de puertas"
+msgstr "Number of doors"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_factura__estado__2
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Pagada"
+msgstr "Paid"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Para cualquier consulta, contáctenos al <strong>+34 123 456 789</strong>"
+msgstr "For any queries, please contact us at <strong>+34 123 456 789</strong>"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_cita__estado__0
+msgid "Pendiente"
+msgstr "Earring"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__precio
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_tree
+msgid "Precio"
+msgstr "Price"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__precio_total
+msgid "Precio total"
+msgstr "Total price"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+msgid "Productos"
+msgstr "Products"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__productos_ids
+msgid "Productos Suministrados"
+msgstr "Products Supplied"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__propietario_id
+msgid "Propietario"
+msgstr "Owner"
+
+#. module: mjiq_taller
+#: model:ir.actions.act_window,name:mjiq_taller.proveedor_action
+#: model:ir.model,name:mjiq_taller.model_mjiq_taller_proveedor
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__proveedor_ids
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_repuestos__proveedor_id
+#: model:ir.ui.menu,name:mjiq_taller.proveedor_menu
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_tree
+msgid "Proveedor"
+msgstr "Supplier"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.factura_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_tree
+msgid "Proveedores"
+msgstr "Suppliers"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Proveedores Asociados"
+msgstr "Associated Suppliers"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__name
+msgid "Referencia"
+msgstr "Reference"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Repuesto"
+msgstr "Replacement"
+
+#. module: mjiq_taller
+#: model:ir.actions.act_window,name:mjiq_taller.repuestos_action
+#: model:ir.model,name:mjiq_taller.model_mjiq_taller_repuestos
+#: model:ir.ui.menu,name:mjiq_taller.repuestos_menu
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_tree
+msgid "Repuestos"
+msgstr "Spare parts"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__repuestos_ids
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Repuestos Utilizados"
+msgstr "Used Spare Parts"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__activity_user_id
+msgid "Responsible User"
+msgstr "Responsible User"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS Delivery error"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__salario
+msgid "Salario del mecánico"
+msgstr "Mechanic Salary"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cita__servicio
+msgid "Servicio"
+msgstr "Service"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.repuestos_tree
+msgid "Stock"
+msgstr "Stock"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__cargo__supervisor_técnico
+msgid "Supervisor Técnico"
+msgstr "Technical Supervisor"
+
+#. module: mjiq_taller
+#: model:ir.ui.menu,name:mjiq_taller.root
+msgid "Taller"
+msgstr "Workshop"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__telefono
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_mecanico__telefono
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_proveedor__telefono
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.proveedor_tree
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.report_factura_view
+msgid "Teléfono"
+msgstr "Phone"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__tipoCombustible
+msgid "Tipo de Combustible"
+msgstr "Fuel Type"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__tipo_vehiculo
+msgid "Tipo de Vehículo"
+msgstr "Vehicle Type"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_factura__total
+msgid "Total"
+msgstr "Total"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__tipo_vehiculo__tractor
+msgid "Tractor"
+msgstr "Tractor"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_vehiculo__transmision
+msgid "Transmisión"
+msgstr "Transmission"
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_mecanico__especialidad__transmisión_y_embrague
+msgid "Transmisión y embrague"
+msgstr "Transmission and clutch"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type of the exception activity on record."
+
+#. module: mjiq_taller
+#: model:ir.model.fields.selection,name:mjiq_taller.selection__mjiq_taller_vehiculo__estado__1
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_search
+msgid "Usado"
+msgstr "Used"
+
+#. module: mjiq_taller
+#: model:ir.actions.act_window,name:mjiq_taller.vehiculo_action
+#: model:ir.model,name:mjiq_taller.model_mjiq_taller_vehiculo
+#: model:ir.ui.menu,name:mjiq_taller.vehiculo_menu
+msgid "Vehiculo"
+msgstr "Vehicle"
+
+#. module: mjiq_taller
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_tree
+msgid "Vehículo"
+msgstr "Vehicle"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__vehiculo_ids
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.cliente_form
+#: model_terms:ir.ui.view,arch_db:mjiq_taller.vehiculo_search
+msgid "Vehículos"
+msgstr "Vehicles"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,field_description:mjiq_taller.field_mjiq_taller_cliente__website_message_ids
+msgid "Website Messages"
+msgstr "Website Messages"
+
+#. module: mjiq_taller
+#: model:ir.model.fields,help:mjiq_taller.field_mjiq_taller_cliente__website_message_ids
+msgid "Website communication history"
+msgstr "Website communication history"
